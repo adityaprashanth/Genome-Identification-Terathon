@@ -1,0 +1,75 @@
+{% extends "/shared/layout.html" %}
+{% block title %}Signup{% endblock %}
+{% block head %}
+    {{ super() }}
+
+    <style>
+        body {
+            background-image: url("/static/images/bg.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="container d-flex h-75">
+        <div class="row justify-content-center align-self-center welcome">
+            <h4 style="color: white">SIGNUP</h4>
+
+            <div style="width: 90%">
+                {% if msg %}
+                    <div class="alert alert-success">{{ msg }}</div>
+                {% endif %}
+                {% if error %}
+                    <div class="alert alert-danger">{{ error }}</div>
+                {% endif %}
+                <form action="/signup" method="POST">
+                    <div class="form-group">
+                        <label for="name" style="color: white">Name</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            name="name"
+                            aria-describedby="name"
+                            placeholder="Your name"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="email" style="color: white">Email address</label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            name="email"
+                            aria-describedby="emailHelp"
+                            placeholder="Enter email address"
+                        />
+                        <small id="emailHelp" class="form-text text-muted">
+                            We'll never share your email with anyone else.
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" style="color: white">Password</label>
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="password"
+                            name="password"
+                            placeholder="Password"
+                        />
+                    </div>
+
+                    <div class="button-container">
+                        <button type="submit" class="btn btn-primary"> Sign Up </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body {{"class=home" if g and g.bg==1 else ""}}>
+  <div class="container">
+    <hr class="hr-divider">
+    <p class="text-center mt-4">
+        <!--
+        <a href="./templetes/shared/layout.html">Home</a>
+        -->
+    </p>
+</div>
+
+    <div class="container-fluid">
+
+        <div class="text-center">
+            <h1 class="nav-heading" style="color: aqua; font-weight: bold; mb-4">Genome</h1>
+        </div>
+
+        <div class="container">  <h2 align="center">ABOUT:</h2>
+
+            <h4 styles="font-family:georgia, serif; text-align:center;">  The human genome is the complete set of DNA instructions in a human cell,
+                which is made up of 23 pairs of chromosomes in the nucleus and a small DNA 
+                molecule in the mitochondria. The genome contains protein-coding DNA sequences 
+                and non-coding DNA, which includes DNA that codes for non-translated RNA, promoters, 
+                structural DNA, and transposable elements. The human genome contains 3 billion DNA building 
+                blocks, or nucleotides, which is enough to fill about 1,000 telephone books if each nucleotide 
+                is represented by one letter.
+            </h4>
+
+            <hr class="hr-divider">
+        </div>
+
+        <div class="container mt-4">  <div class="row">
+            <div class="col-md-4">
+                <a href="https://en.wikipedia.org/wiki/James_Watson">
+                  <img src="../static/images/James D. Watson.png" class="img-fluid rounded-3 mb-3" alt="Image 1">
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="https://en.wikipedia.org/wiki/Nettie_Stevens">
+                  <img src="../static/images/Nettie Stevens.jpg" class="img-fluid rounded-3 mb-3" alt="Image 1">
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="https://en.wikipedia.org/wiki/Barbara_McClintock">
+                  <img src="../static/images/Barbara McClintock.jpg" class="img-fluid rounded-3 mb-3" alt="Image 1">
+                </a>
+              </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
